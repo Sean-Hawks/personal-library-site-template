@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { Post } from '../types';
+import { withBasePath } from './base-path';
 import { parseFrontmatter } from './frontmatter';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -61,14 +62,14 @@ function normalizeBanner(value: unknown) {
 
   const match = value.match(/^\[\[(.*?)\]\]$/);
   if (match) {
-    return `/images/${match[1]}`;
+    return withBasePath(`/images/${match[1]}`);
   }
 
   if (!value.startsWith('/')) {
-    return `/images/${value}`;
+    return withBasePath(`/images/${value}`);
   }
 
-  return value;
+  return withBasePath(value);
 }
 
 function excerptMarkdown(value = "", length = 140) {

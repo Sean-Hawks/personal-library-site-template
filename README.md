@@ -134,14 +134,13 @@ This template is configured for static export and GitHub Pages.
 4. Set the source to GitHub Actions.
 5. Optional: add your custom domain and create `public/CNAME`.
 
-If you deploy under `https://<user>.github.io/<repo>/`, update `next.config.ts`:
+If you deploy under `https://<user>.github.io/<repo>/`, the GitHub Actions workflow automatically reads the repository name and builds with the correct subpath.
 
-```ts
-const repo = "your-repo-name";
-const useSubpath = true;
+If you deploy with a custom domain, set a repository variable:
+
+```text
+DEPLOY_TARGET=custom-domain
 ```
-
-If you deploy with a custom domain, keep `useSubpath = false`.
 
 ## Recommended First Issues
 

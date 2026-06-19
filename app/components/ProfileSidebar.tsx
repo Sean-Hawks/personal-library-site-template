@@ -6,9 +6,10 @@ import { BadgeCheck, Dot, Github, Mail, Pin, Sparkles } from "lucide-react";
 import Chip from "./Chip";
 import SectionTitle from "./SectionTitle";
 import { RoleTag } from "../types";
+import { withBasePath } from "../lib/base-path";
 
-const AVATAR_SRC = "/avatar.svg";
-const BANNER_SRC = "/banner.svg";
+const AVATAR_SRC = withBasePath("/avatar.svg");
+const BANNER_SRC = withBasePath("/banner.svg");
 const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 
 export default function ProfileSidebar({ roles }: { roles: RoleTag[] }) {

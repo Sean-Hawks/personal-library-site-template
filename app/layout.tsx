@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { withBasePath } from "./lib/base-path";
 
 const siteUrl = "https://your-site.example";
 const siteTitle = "your-site.example";
 const siteDescription =
   "Your Name personal site for Blog, Talk, Library, Projects, and notes about code, music, media, and life.";
-const defaultImage = "/og/default.svg";
+const defaultImage = withBasePath("/og/default.svg");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -70,11 +71,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/avatar.svg", type: "image/png" },
+      { url: withBasePath("/favicon.ico") },
+      { url: withBasePath("/avatar.svg"), type: "image/png" },
     ],
-    shortcut: "/avatar.svg",
-    apple: "/avatar.svg",
+    shortcut: withBasePath("/avatar.svg"),
+    apple: withBasePath("/avatar.svg"),
   },
 };
 

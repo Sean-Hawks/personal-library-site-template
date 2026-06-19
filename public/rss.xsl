@@ -226,11 +226,11 @@
       <body>
         <main class="shell">
           <div class="top">
-            <a class="brand" href="/">your-site.example</a>
+            <a class="brand" href="./">your-site.example</a>
             <nav class="nav" aria-label="RSS navigation">
-              <a href="/">README</a>
-              <a href="/blog/">Blog</a>
-              <a href="/library/">Library</a>
+              <a href="./">README</a>
+              <a href="./blog/">Blog</a>
+              <a href="./library/">Library</a>
             </nav>
           </div>
 
@@ -241,8 +241,8 @@
               This feed is meant for RSS readers. Add this URL to Feedly, Inoreader, NetNewsWire, Reeder, Thunderbird, or another reader to receive Blog, Talk, and Library Review updates.
             </p>
             <div class="actions">
-              <a class="button primary" href="/">Back Home</a>
-              <a class="button" href="/blog/">Read Blog</a>
+              <a class="button primary" href="./">Back Home</a>
+              <a class="button" href="./blog/">Read Blog</a>
             </div>
             <div class="feed-url">
               <xsl:value-of select="/rss/channel/atom:link/@href" />

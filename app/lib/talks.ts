@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { Talk } from '../types';
+import { withBasePath } from './base-path';
 import { parseFrontmatter } from './frontmatter';
 
 const talksDirectory = path.join(process.cwd(), 'content/talks');
@@ -65,11 +66,11 @@ export function getSortedTalksData(): Talk[] {
       const bannerStr = String(data.banner);
       const match = bannerStr.match(/^\[\[(.*?)\]\]$/);
       if (match) {
-        banner = `/images/${match[1]}`;
+        banner = withBasePath(`/images/${match[1]}`);
       } else if (!bannerStr.startsWith('/')) {
-        banner = `/images/${bannerStr}`;
+        banner = withBasePath(`/images/${bannerStr}`);
       } else {
-        banner = bannerStr;
+        banner = withBasePath(bannerStr);
       }
     }
 

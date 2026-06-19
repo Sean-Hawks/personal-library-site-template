@@ -91,7 +91,7 @@ export function GET() {
 
   const lastBuildDate = feedItems[0]?.date ? toRssDate(feedItems[0].date) : "";
   const feed = `<?xml version="1.0" encoding="UTF-8" ?>
-    <?xml-stylesheet type="text/xsl" href="/rss.xsl"?>
+    <?xml-stylesheet type="text/xsl" href="rss.xsl"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
         <title>your-site.example</title>

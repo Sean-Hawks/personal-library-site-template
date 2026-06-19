@@ -65,14 +65,15 @@ If you deploy to a project URL like:
 https://your-github.github.io/personal-library-site-template/
 ```
 
-update `next.config.ts`:
+the GitHub Actions workflow automatically reads `GITHUB_REPOSITORY` and builds with the correct `basePath` and `assetPrefix`.
 
-```ts
-const repo = "personal-library-site-template";
-const useSubpath = true;
+If you deploy with a custom domain, set this repository variable in GitHub:
+
+```text
+DEPLOY_TARGET=custom-domain
 ```
 
-If you deploy with a custom domain, keep `useSubpath = false`.
+That keeps the build at the domain root instead of under `/<repo>/`.
 
 ## Checklist
 

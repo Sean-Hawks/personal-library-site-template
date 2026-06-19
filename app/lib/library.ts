@@ -9,6 +9,7 @@ import {
   type LibraryRecommendedWork,
   type LibraryStatus,
 } from "../data/library";
+import { withBasePath } from "./base-path";
 import { parseFrontmatter } from "./frontmatter";
 
 const libraryDirectory = path.join(process.cwd(), "content/library");
@@ -76,7 +77,9 @@ function normalizeRecommendations(value: unknown) {
 
         return {
           title,
-          image: normalizeString(work.image) || undefined,
+          image: normalizeString(work.image)
+            ? withBasePath(normalizeString(work.image))
+            : undefined,
           link: normalizeString(work.link) || undefined,
           source: normalizeString(work.source) || undefined,
           note: normalizeString(work.note) || undefined,
@@ -164,7 +167,7 @@ function parseInlineRecommendation(line: string): LibraryRecommendedWork | null 
       link: link.trim(),
       source: textParts[0],
       note: textParts[1],
-      image,
+      image: image ? withBasePath(image) : undefined,
     };
   }
 
@@ -187,7 +190,7 @@ function parseInlineRecommendation(line: string): LibraryRecommendedWork | null 
     source,
     link,
     note,
-    image,
+    image: image ? withBasePath(image) : undefined,
   };
 }
 
@@ -247,7 +250,7 @@ function normalizeImage(value: unknown, title: string): LibraryImage {
   const image = value as Record<string, unknown>;
 
   return {
-    src: normalizeString(image.src),
+    src: withBasePath(normalizeString(image.src)),
     alt: normalizeString(image.alt, `${title} cover`),
     credit: normalizeString(image.credit),
     source: normalizeString(image.source),
