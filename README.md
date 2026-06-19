@@ -12,15 +12,17 @@ See the finished template at [sean-hawks.github.io/personal-library-site-templat
 
 Original site and inspiration: [hawks.tw](https://hawks.tw/).
 
-## Desktop Preview
+## Production Preview
+
+Desktop screenshots from the original site, [hawks.tw](https://hawks.tw/).
 
 | Home | Library |
 | --- | --- |
-| ![README-style homepage desktop preview](public/screenshots/home.png) | ![Markdown Library desktop preview](public/screenshots/library.png) |
+| ![hawks.tw homepage desktop screenshot](public/screenshots/home.png) | ![hawks.tw Library desktop screenshot](public/screenshots/library.png) |
 
-| Friendly 404 |
+| Blog |
 | --- |
-| ![Friendly 404 page desktop preview](public/screenshots/not-found.png) |
+| ![hawks.tw Blog desktop screenshot](public/screenshots/blog.png) |
 
 ## Features
 
