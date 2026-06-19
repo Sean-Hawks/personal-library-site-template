@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-label="Banner placeholder">
+  <rect width="1600" height="520" fill="#191b22"/>
+  <path d="M0 360c180-70 310-80 480-28s340 54 540-32 394-96 580-18v238H0z" fill="#242734"/>
+  <path d="M0 414c230-54 410-52 604 10s372 56 550-10 314-74 446-28v134H0z" fill="#2f3344"/>
+  <circle cx="230" cy="132" r="48" fill="#f3c440"/>
+  <circle cx="1320" cy="150" r="92" fill="#8f7cff" opacity=".35"/>
+  <text x="90" y="438" fill="#e9e4dc" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">Personal Library</text>
+</svg>
+

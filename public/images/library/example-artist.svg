@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Example Artist artwork">
+  <rect width="640" height="900" fill="#191b22"/>
+  <path d="M320 150v420" stroke="#f3c440" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="320" cy="580" r="116" fill="#8f7cff"/>
+  <path d="M320 150c120 26 170 94 170 196" stroke="#f3c440" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <text x="76" y="830" fill="#f1ece4" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">ARTIST</text>
+</svg>
+

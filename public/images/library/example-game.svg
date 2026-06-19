@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Example Game cover">
+  <rect width="640" height="900" fill="#20232d"/>
+  <rect x="130" y="250" width="380" height="220" rx="72" fill="#f3c440"/>
+  <circle cx="248" cy="360" r="28" fill="#20232d"/>
+  <circle cx="402" cy="360" r="28" fill="#20232d"/>
+  <rect x="292" y="520" width="56" height="160" rx="24" fill="#8f7cff"/>
+  <text x="92" y="830" fill="#f1ece4" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">GAME</text>
+</svg>

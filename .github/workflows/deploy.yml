@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Run when changes are pushed to main.
+  push:
+    branches: ["main"]
+
+  # Allow manual runs.
+  workflow_dispatch:
+
+# Required permissions for GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Avoid overlapping deployments.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # Use npm install to avoid lockfile version issues in template forks.
+      - name: Install
+        run: npm install
+
+      - name: Build (Next export -> out/)
+        env:
+          PRESERVE_LIVE_STATIC_ORIGIN: https://your-site.example
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # Deploy job.
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

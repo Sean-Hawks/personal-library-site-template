@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Example Movie poster">
+  <rect width="640" height="900" fill="#16181f"/>
+  <rect x="84" y="130" width="472" height="640" rx="26" fill="#2b303d" stroke="#f3c440" stroke-width="8"/>
+  <circle cx="210" cy="270" r="58" fill="#f3c440"/>
+  <circle cx="430" cy="270" r="58" fill="#8f7cff"/>
+  <text x="82" y="840" fill="#f1ece4" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">MOVIE</text>
+</svg>
+
