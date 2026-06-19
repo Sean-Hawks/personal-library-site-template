@@ -10,15 +10,17 @@ The core idea is simple: edit Markdown files, commit them, and your public Libra
 
 See the finished template at [sean-hawks.github.io/personal-library-site-template](https://sean-hawks.github.io/personal-library-site-template/).
 
-## Preview
+Original site and inspiration: [hawks.tw](https://hawks.tw/).
+
+## Desktop Preview
 
 | Home | Library |
 | --- | --- |
-| ![README-style homepage preview](public/screenshots/home.jpg) | ![Markdown Library preview](public/screenshots/library.jpg) |
+| ![README-style homepage desktop preview](public/screenshots/home.png) | ![Markdown Library desktop preview](public/screenshots/library.png) |
 
 | Friendly 404 |
 | --- |
-| ![Friendly 404 page preview](public/screenshots/not-found.jpg) |
+| ![Friendly 404 page desktop preview](public/screenshots/not-found.png) |
 
 ## Features
 
