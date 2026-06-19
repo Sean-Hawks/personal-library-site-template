@@ -6,6 +6,20 @@ It is designed to feel like a personal profile instead of a resume: a sidebar id
 
 The core idea is simple: edit Markdown files, commit them, and your public Library updates automatically.
 
+## Live Demo
+
+See the finished template at [sean-hawks.github.io/personal-library-site-template](https://sean-hawks.github.io/personal-library-site-template/).
+
+## Preview
+
+| Home | Library |
+| --- | --- |
+| ![README-style homepage preview](public/screenshots/home.jpg) | ![Markdown Library preview](public/screenshots/library.jpg) |
+
+| Friendly 404 |
+| --- |
+| ![Friendly 404 page preview](public/screenshots/not-found.jpg) |
+
 ## Features
 
 - Library-first homepage with profile, activity timeline, featured picks, latest posts, talks, and projects
